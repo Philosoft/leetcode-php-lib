@@ -1,8 +1,9 @@
 {
   "name": "thephilosoft/leetcode-php-lib",
   "description": "Collection of base classes for LeetCode problems (binary tree, linked list etc)",
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "license": "GPL-3.0-or-later",
+  "type": "library",
   "authors": [
     {
       "name": "thephilosoft",
@@ -17,19 +18,23 @@
   },
   "autoload": {
     "psr-4": {
-      "thephilosoft\\": "src/",
+      "thephilosoft\\leetcode\\lib\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "tests\\": "tests/"
     }
   },
   "scripts": {
     "test": [
-      "./vendor/bin/phpunit tests"
+      "./vendor/bin/phpunit --color tests"
     ],
     "analyze": [
       "./tools/phpstan/vendor/bin/phpstan analyze --xdebug -vvv"
     ],
     "fix-style": [
-      "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix"
+      "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix -vvv"
     ]
   }
 }
