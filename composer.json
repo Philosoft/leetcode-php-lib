@@ -34,7 +34,7 @@
       "./tools/phpstan/vendor/bin/phpstan analyze --xdebug -vvv"
     ],
     "fix-style": [
-      "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix -vvv"
+      "./tools/php-cs-fixer/vendor/bin/php-cs-fixer fix -vvv --diff"
     ]
   }
 }
